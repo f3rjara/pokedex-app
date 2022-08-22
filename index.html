@@ -13,26 +13,71 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <header class="bg-blue ">
+  <header>
     <nav class="navbar">
-      <a href="/" aria-details="PokéDex Home" class="nav-link text-white">
+      <a href="/" aria-details="PokéDex Home" class="nav-link">
         <img src="assets/img/logo.svg" alt="PokéDex">
         PokéDex
       </a>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        pokemon name
+  <main id="app">
+    <section class="container">
+      <div class="row">
+        <div class="col lg-col-1 col-pokemon">
+          <h1 class="name-pokemon" id="name-pokemon"></h1>
+          <img id="image-pokemon" loading="lazy" class="image-pokemon">
+        </div>
+        <div class="col col-card">
+          <div class="card">
+            <ul class="features">
+              <li class="item">
+                <span class="title-item">NO.</span>
+                <p class="data-item" id="id"></p>
+              </li>
+              <li class="item">
+                <span class="title-item">LEVEL</span>
+                <p class="data-item" id="level"></p>
+              </li>
+              <li class="item">
+                <span class="title-item">TYPE</span>
+                <p class="data-item" id="type"></p>
+              </li>
+              <li class="item">
+                <span class="title-item">HABILITY</span>
+                <p class="data-item" id="hability"></p>
+              </li>
+              <li class="item">
+                <span class="title-item">HEIGHT</span>
+                <p class="data-item" id="height"></p>
+              </li>
+              <li class="item">
+                <span class="title-item">WEIGHT</span>
+                <p class="data-item" id="weight"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        pokemon Card
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col lg-col-1 col-others">
+          <h2>OTHERS</h2>
+        </div>
+        <div class="col col-list-pokemon">
+          <ul class="list-pokemon" id="list-pokemon">
+
+            
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-
+  </footer>
   <script src="main.js" ></script>
 </body>
 </html>

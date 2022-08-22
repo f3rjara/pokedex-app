@@ -1,0 +1,152 @@
+:root {
+  /* Primary Colors */
+  --bg-red: #fb1b1b;
+  --bg-yellow: #d5a100;
+  --bg-blue: #0a285f;
+  /* Secondary Colors*/
+  --bg-gray: #dfdfdf;
+  --bg-white: #ffffff;
+  --bg-black: #000000;
+  /* fonts */
+  --font-title: "Russo One", sans-serif;
+  --font-body: "Roboto", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  background: var(--bg-gray);
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--bg-gray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-yellow);
+  border-radius: 10px;
+  border: 4px solid var(--bg-gray);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-blue);
+}
+
+/* global class*/
+.bg-blue {
+  background-color: var(--bg-blue);
+}
+.text-blue {
+  color: var(--bg-blue);
+}
+.bg-yellow {
+  background-color: var(--bg-yellow);
+}
+.text-yellow {
+  color: var(--bg-yellow);
+}
+.bg-red {
+  background-color: var(--bg-red);
+}
+.text-red {
+  color: var(--bg-red);
+}
+.bg-gray {
+  background-color: var(--bg-gray);
+}
+.text-gray {
+  color: var(--bg-gray);
+}
+.bg-white {
+  color: var(--bg-white);
+}
+.text-white {
+  color: var(--bg-white);
+}
+.bg-black {
+  background-color: var(--bg-black);
+}
+.text-black {
+  color: var(--bg-black);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-gray);
+  min-height: 100vh;
+  font-family: var(--font-body);
+}
+
+header {
+  padding: 1em;
+  display: flex;
+}
+
+header .nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--font-title);
+  padding: 0.5em;
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+header .nav-link:hover {
+  filter: drop-shadow(2px 4px 6px black);
+  transform: translateY(-5px);
+}
+
+header .nav-link img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  filter: invert(1);
+}
+
+/* Body Pokemon */
+
+.container {
+  max-width: 1200px;
+  padding: 2em 1em;
+  margin: 0 auto;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+  }
+
+  header .nav-link {
+    font-size: 1.2em;
+  }
+
+  header .nav-link img {
+    width: 30px;
+    height: auto;
+  }
+
+  /* Body Pokemon */
+  .container {
+    padding: 1.2em 0.8em;
+  }
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

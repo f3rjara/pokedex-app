@@ -8,8 +8,8 @@
   --bg-white: #ffffff;
   --bg-black: #000000;
   /* fonts */
-  --font-title: "Russo One", sans-serif;
-  --font-body: "Roboto", sans-serif;
+  --font-title: "Russo One", Arial, sans-serif;
+  --font-body: "Roboto", Impact,  sans-serif;
   --box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
 }
 
@@ -197,7 +197,7 @@ header .nav-link img {
 .col-others h2 {
   font-size: 3em;
   text-transform: uppercase;
-  color: var(--bg-white);
+  color: var(--bg-blue);
   font-family: var(--font-title);
   letter-spacing: 1.5px;
 }
@@ -255,6 +255,14 @@ header .nav-link img {
   header .nav-link img {
     width: 30px;
     height: auto;
+  }
+
+  main {
+    background-size: 40%;
+    background-attachment: fixed;
+    background-position: 115% 30%;
+    background-color: var(--bg-gray);
+    background-blend-mode: luminosity;
   }
 
   /* Body Pokemon */

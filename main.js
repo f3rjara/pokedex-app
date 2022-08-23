@@ -20,11 +20,12 @@ const getPokemon = async ( id ) => {
 }
 
 const showPokemonPrimary = ( pokemon ) => {
+  console.log( pokemon );
   const pokemonData = {
     id: pokemon.id,
     name: pokemon.name,
     image: pokemon.sprites.other.dream_world.front_default,
-    image_bg: pokemon.sprites.other.home.front_default,
+    image_bg: pokemon.sprites.other['official-artwork'].front_default,
     height: pokemon.height,
     weight: pokemon.weight,
     type: pokemon.types[0].type.name,

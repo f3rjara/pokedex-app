@@ -250,6 +250,7 @@ header .nav-link img {
 
   header .nav-link {
     font-size: 1.2em;
+    justify-content: center;
   }
 
   header .nav-link img {
@@ -305,9 +306,12 @@ header .nav-link img {
   }
 
   .col-others {
-    justify-content: center
+    justify-content: center;
   }
 
+  .col-others h2 {
+    font-size: 2em;
+  }
   .col-list-pokemon .list-pokemon {
     columns: 2;
     gap: 20px;

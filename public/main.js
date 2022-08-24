@@ -20,12 +20,10 @@ const getPokemon = async ( id ) => {
 }
 
 const showPokemonPrimary = ( pokemon ) => {
-  console.log( pokemon );
   const pokemonData = {
     id: pokemon.id,
-    name: pokemon.name,
+    name: `🔥 ${pokemon.name}`,
     image: pokemon.sprites.other.dream_world.front_default,
-    image_bg: pokemon.sprites.other['official-artwork'].front_default,
     height: pokemon.height,
     weight: pokemon.weight,
     type: pokemon.types[0].type.name,
@@ -33,9 +31,8 @@ const showPokemonPrimary = ( pokemon ) => {
     hability: pokemon.abilities[0].ability.name,
   }
 
-  const MAIN =  document.querySelector('#app');
-  const image_pokemon =  document.querySelector('#image-pokemon');
-  const name_pokemon =  document.querySelector('#name-pokemon');
+  const image_pokemon =  document.querySelector('.pokemon__image');
+  const name_pokemon =  document.querySelector('.pokemon__name');
   const id = document.querySelector('#id');
   const level = document.querySelector('#level');
   const type = document.querySelector('#type');
@@ -43,7 +40,6 @@ const showPokemonPrimary = ( pokemon ) => {
   const height = document.querySelector('#height');
   const weight = document.querySelector('#weight');
 
-  MAIN.style.backgroundImage = `url(${pokemonData.image_bg})`;
   image_pokemon.src = pokemonData.image;
   image_pokemon.alt = pokemonData.name;
   image_pokemon.title = pokemonData.name.toUpperCase();
@@ -59,14 +55,14 @@ const showPokemonPrimary = ( pokemon ) => {
 const othersPokemons = () => {
   for (let index = 0; index < 4; index++) {
     const element = getRandomInt(150);
-    const list_pokemons = document.querySelector('#list-pokemon');
+    const list_pokemons = document.querySelector('.new-pokemons__list');
     const item = document.createElement('li');
-    item.className = 'pokemon-item';
+    item.className = 'new-pokemons__list__item new';
     const button = document.createElement('button');
-    button.className = 'btn btn-primary';
+    button.className = 'new__button';
     item.appendChild(button);
     const image = document.createElement('img');
-    image.className = 'image';
+    image.className = 'new__button__image';
     image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${element}.svg`;
     image.alt = 'Other Pokemon';
     image.loading = "lazy"

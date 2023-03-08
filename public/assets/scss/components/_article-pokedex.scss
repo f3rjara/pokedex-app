@@ -1,0 +1,97 @@
+.article-pokedex {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 4em;
+}
+
+.pokemon {
+  position: relative;
+  display: grid;
+  gap: 30px;
+  &__name {
+    background-color: $white;
+    padding: .7em;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: $shadown;
+    text-transform: uppercase;
+    font-family: $font-title;
+    margin: 0;
+    max-width: 100%;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5em;
+      padding: .5em;
+    }
+  }
+  &__image{
+    width: 100%;
+    object-fit: contain;
+    transition: filter .5s ease-in-out, transform .7s ease-in-out;
+    &:hover {
+      filter: drop-shadow( $shadown );
+      transform: translateY(-5px);
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: -10em;
+    }
+  }
+  &--card{
+    padding: 1.5em 3em;
+    box-shadow: $shadown;
+    background-color: $white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    @media screen and (max-width: 768px) {
+      padding: 1em;
+      padding-top: 6em;
+    }
+  }
+}
+
+.card-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  @media screen and (max-width: 768px) {
+    margin: 2em;
+  }
+  &__item {
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba($color: $black, $alpha: .05);
+    transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 10px 20px rgba($color: $black, $alpha: .04);
+    }
+    @media screen and (max-width: 768px) {
+      padding: .5em 1.2em;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.features {
+  &__title {
+    font-size: .9em;
+    text-transform: uppercase;
+    color: rgba($color: $black, $alpha: .7);
+    font-weight: 500;
+  }
+  &__data {
+    font-size: 1.5em;
+    margin: .3em 0;
+    font-family: $font-title;
+    color: $secondary-color;
+  }
+}

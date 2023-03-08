@@ -55,14 +55,14 @@ const showPokemonPrimary = ( pokemon ) => {
 const othersPokemons = () => {
   for (let index = 0; index < 4; index++) {
     const element = getRandomInt(150);
-    const list_pokemons = document.querySelector('.new-pokemons__list');
+    const list_pokemons = document.querySelector('.others-pokemons');
     const item = document.createElement('li');
-    item.className = 'new-pokemons__list__item new';
+    item.className = 'others-pokemons__item other-pokemon';
     const button = document.createElement('button');
-    button.className = 'new__button';
+    button.className = 'other-pokemon__button';
     item.appendChild(button);
     const image = document.createElement('img');
-    image.className = 'new__button__image';
+    image.className = 'other-pokemon__image';
     image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${element}.svg`;
     image.alt = 'Other Pokemon';
     image.loading = "lazy"

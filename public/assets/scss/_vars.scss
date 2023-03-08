@@ -1,0 +1,25 @@
+// Colors
+$primary-color:   #d5a100;
+$secondary-color: #0a285f;
+$gray:            #dfdfdf;
+$white:           #ffffff;
+$black:           #000000;
+
+$shadown: 0px 0px 5px rgba(0, 0, 0, .4);
+
+// load Fonts from local
+@font-face {
+  font-family: 'Russo One';
+  src: url('../fonts/RussoOne-Regular.woff2') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('truetype');
+  font-display: swap;
+}
+
+// Fonts
+$font-title:  "Russo One", Arial, sans-serif;
+$font-body:   "Roboto", Impact,  sans-serif;

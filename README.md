@@ -3,11 +3,11 @@
 PokéDex is a web application that allows users to search for Pokémon by name or number. The app also allows users to view the details of a Pokémon.
 
 ### Desktop app preview 🖥️
-<img title="App in Desktop" alt="PokeDex for Desktop" src="/public/assets/img/PokeDex.png">
+<img title="App in Desktop" alt="PokeDex for Desktop" src="/docs/assets/img/PokeDex.png">
 
 ### Mobile app preview 📲
 <div align="center">
-  <img title="App in Desktop" alt="PokeDex for Mobile" src="/public/assets/img/PokeDex-mobile.png" width=300px>
+  <img title="App in Desktop" alt="PokeDex for Mobile" src="/docs/assets/img/PokeDex-mobile.png" width=300px>
 </div>
 
 ## Gitlab Page 📦

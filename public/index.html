@@ -1,95 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PokéDex es una aplicación web que permite a los usuarios ver un Pokémon al recargar la página La aplicación también permite a los usuarios ver los detalles de un Pokémon.">
-  <meta name="author" content="Fernando Jaramllo">
-  <title>PokéDex</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Russo+One&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Russo+One&display=swap"></noscript>
-  <link rel="stylesheet" href="main.css" crossorigin>
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PokéDex es una aplicación web que permite a los usuarios ver un Pokémon al recargar la página La aplicación también permite a los usuarios ver los detalles de un Pokémon."
+    />
+    <meta name="author" content="Fernando Jaramllo" />
+    <title>PokeDex</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/main.min.css" crossorigin />
+  </head>
+  <body>
+    <nav class="nav" role="navigation">
+      <ul class="navbar" aria-label="main menu">
+        <li class="navbar__item">
+          <a href="/" class="navbar__link">
+            <picture>
+              <source
+                srcset="assets/img/logo.svg"
+                type="image/svg+xml"
+                media="(min-width: 520px)"
+              />
+              <img
+                src="assets/img/logo.svg"
+                alt="PokéDex"
+                width="40px"
+                height="40px"
+                class="navbar__image"
+              />
+            </picture>
+            PokéDex_
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-  <nav class="nav bg-blue" role="navigation">
-    <ul class="nav__navbar" aria-label="main menu">
-      <li class="nav__item">
-        <a href="/" class="nav__link text-white">
-          <picture>
-            <source srcset="assets/img/logo.svg" type="image/svg+xml" media="(min-width: 520px)">
-            <img src="assets/img/logo.svg" alt="PokéDex" width="100%" height="100%">
-          </picture>
-          PokéDex
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <main class="main">
+      <article class="article-pokedex">
+        <section class="pokemon">
+          <h1 class="pokemon__name"></h1>
+          <img
+            class="pokemon__image"
+            alt="pokemon__image"
+            width="450"
+            height="450"
+          />
+        </section>
+        <section class="pokemon--card">
+          <ul class="card-features">
+            <li class="card-features__item features">
+              <h2 class="features__title">NO.</h2>
+              <p class="features__data" id="id"></p>
+            </li>
+            <li class="card-features__item features">
+              <h2 class="features__title">LEVEL</h2>
+              <p class="features__data" id="level"></p>
+            </li>
+            <li class="card-features__item features">
+              <h2 class="features__title">TYPE</h2>
+              <p class="features__data" id="type"></p>
+            </li>
+            <li class="card-features__item features">
+              <h2 class="features__title">HABILITY</h2>
+              <p class="features__data" id="hability"></p>
+            </li>
+            <li class="card-features__item features">
+              <h2 class="features__title">HEIGHT</h2>
+              <p class="features__data" id="height"></p>
+            </li>
+            <li class="card-features__item features">
+              <h2 class="features__title">WEIGHT</h2>
+              <p class="features__data" id="weight"></p>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
 
-  <main class="main bg-gray">
-    <article class="article container">
-      <section class="section row">
-        <div class="row__col row__col--2 pokemon">
-          <h1  class="pokemon__name"></h1>
-          <img class="pokemon__image" alt="pokemon__image">
-        </div>
-        <div class="row__col">
-          <div class="card bg-white">
-            <ul class="card__features">
-              <li class="card__features__item features">
-                <h2 class="features__title">NO.</h2>
-                <p class="features__data" id="id"></p>
-              </li>
-              <li class="card__features__item features">
-                <h2 class="features__title">LEVEL</h2>
-                <p class="features__data" id="level"></p>
-              </li>
-              <li class="card__features__item features">
-                <h2 class="features__title">TYPE</h2>
-                <p class="features__data" id="type"></p>
-              </li>
-              <li class="card__features__item features">
-                <h2 class="features__title">HABILITY</h2>
-                <p class="features__data" id="hability"></p>
-              </li>
-              <li class="card__features__item features">
-                <h2 class="features__title">HEIGHT</h2>
-                <p class="features__data" id="height"></p>
-              </li>
-              <li class="card__features__item features">
-                <h2 class="features__title">WEIGHT</h2>
-                <p class="features__data" id="weight"></p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </article>
-  </main>
-  
-  <footer class="footer bg-yellow">
-    <section class="container row">
-        <article class="row__col row__col--2 title-footer">
-          <h2 class="title-footer__title">OTHERS</h2>
-        </article>
-        <article class="row__col new-pokemons">
-          <ul class="new-pokemons__list">
+    <footer class="footer">
+        <section class="footer__content">
+          <h2 class="footer__title">OTHERS</h2>
+          <ul class="others-pokemons">
             <template>
-              <li class="new-pokemons__list__item new">
-                <button title="Charmander" class="new__button">
+              <li class="others-pokemons__item other-pokemon">
+                <button title="Charmander" class="other-pokemon__button">
                   <picture>
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="Pokemon" loading="lazy" class="new__button__image">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+                      alt="Pokemon"
+                      loading="lazy"
+                      class="other-pokemon__image"
+                    />
                   </picture>
                 </button>
               </li>
             </template>
           </ul>
-        </article>
-    </section>
-  </footer>
-  <script src="main.js" ></script>
-</body>
+        </section>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,39 @@
+@import "./vars";
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  background: $gray;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: $gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 10px;
+  border: 4px solid $gray;
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-body;
+}
+
+.main {
+  min-height: 50vh;
+  width: 100%;
+  background-color: $gray;
+  padding: 5em 0;
+  position: relative;
+}

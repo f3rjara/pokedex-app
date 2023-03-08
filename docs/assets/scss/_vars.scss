@@ -10,13 +10,13 @@ $shadown: 0px 0px 5px rgba(0, 0, 0, .4);
 // load Fonts from local
 @font-face {
   font-family: 'Russo One';
-  src: url('../fonts/RussoOne-Regular.woff2') format('truetype');
+  src: url('./fonts/RussoOne-Regular.woff2') format('truetype');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.woff2') format('truetype');
+  src: url('./fonts/Roboto-Regular.woff2') format('truetype');
   font-display: swap;
 }
 
